@@ -1,0 +1,284 @@
+body {
+/* margin: 0; */
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  align-items: center;
+  background: white;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+#wrap {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 3s;
+}
+
+.contents_area {
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+
+height: 100%;
+position: relative;
+}
+
+ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+a {
+text-decoration: none;
+color: inherit;
+}
+/* //////////////////////////////////// */
+.nav {
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.125);
+  position: relative;
+  width: 100%;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  z-index: 99999;
+}
+
+.nav ul {
+  position: inherit;
+  left: 10px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+  color: #000;
+
+}
+
+.nav li {
+  padding: 0 15px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.nav img {
+  position: fixed;
+  width: 130px;
+  height: 130px;
+  right: 20px;
+  top: 20px;
+  opacity: 0.5;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav img:hover {
+  opacity: 1;
+}
+
+.nav a:hover {
+  color: #007BFF;
+  transition: all 0.3s;
+  text-shadow: 1px 1px 1px rgb(0, 0, 0, 0.125);;
+  box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.125);
+}
+
+/* //////////////////////////////////// */
+
+.intro {
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 72px;
+  font-weight: 900;
+  text-align: center;
+  height: 400px;
+  line-height: 400px;
+}
+
+/* ///////////////////////////// */
+@keyframes scroll {
+0% {
+transform: translateX(0);
+}
+100% {
+transform: translateX(calc(-400px * 23));
+}
+}
+.slider {
+background: white;
+box-shadow: 0 10px 5px rgba(0, 0, 0, 0.125);
+height: 800px;
+margin: auto;
+overflow: hidden;
+position: relative;
+width: 100%;
+}
+.slider::before, .slider::after {
+background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+content: "";
+height: 800px;
+position: absolute;
+width: 200px;
+z-index: 2;
+}
+.slider::after {
+right: 0;
+top: 0;
+transform: rotateZ(180deg);
+}
+.slider::before {
+left: 0;
+top: 0;
+}
+.slider .slide-track {
+display: flex;
+width: calc(400px * 46);
+}
+.slider .slide {
+height: 800px;
+width: 400px;
+display: flex;
+justify-content: center;
+}
+
+/* ///////////////////////////////////////// */
+footer {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 200px;
+  background-color: white;
+  color: black;
+  transform : translateY(1%);
+}
+
+.row {
+  /* position: absolute;
+  bottom: 0; */
+  width: 100%;
+  display: flex;
+  padding: 0 75px;
+  box-sizing: border-box;
+}
+
+.infotxt1 {
+position: absolute;
+bottom: 15px;
+left: 35%;
+}
+
+.infotxt2 {
+position: absolute;
+bottom: 72px;
+left: 57%;
+}
+
+.infotxt3 {
+position: absolute;
+bottom: 90px;
+left: 75%;
+}
+
+#logo_img2 {
+position: absolute;
+width: 145px;
+height: 145px;
+bottom: 26px;
+left: 13%;
+}
+
+.row #insta_img {
+width: 35px;
+height: 35px;
+padding-right: 5px;
+}
+
+.row #blog_img {
+width: 35px;
+height: 35px;
+padding-left: 5px;
+}
+
+@media screen and (max-width: 768px) {
+.nav {
+  justify-content: center;
+}
+.nav li {
+  padding: 0px 20px;
+  font-size: 25px;
+}
+.intro {
+  font-size: 50px;
+}
+.nav img {
+    display: none;
+}
+.slider::before, .slider::after {
+  width: 100px;
+}
+#logo_img2 {
+    left: 20%;
+    bottom: 132px;
+}
+.infotxt1 {
+    left: 50%;
+    bottom: 119px;
+}
+.infotxt1 h4 {
+    margin: 0;
+}
+.infotxt2 {
+    left: 23%;
+    bottom: 13px;
+}
+.infotxt3 {
+    left: 49.8%;
+    bottom: 33px;
+}
+footer {
+    height: 300px;
+    transform: translateY(2px);
+}
+footer p {
+    line-height: 21px;
+}
+}
+
+@media screen and (max-width: 480px) {
+.nav li {
+  font-size: 14.5px;
+}
+.slider::before, .slider::after {
+  background: none;
+}
+#logo_img2 {
+  width: 100px;
+  height: 100px;
+  left: 16%;
+  bottom: 169px;
+}
+.infotxt1 {
+  font-size: 13px;
+  left: 48%;
+  bottom: 149px;
+}
+.infotxt2 {
+  font-size: 13px;
+  left: 18%;
+  bottom: 29px;
+}
+.infotxt3 {
+  font-size: 13px;
+  left: 219px;
+  bottom: 53px;
+}
+#insta_img {
+  padding-right: 2.5px;
+}
+#blog_img {
+  padding-left: 2.5px;
+}
+footer p {
+  line-height: 15px;
+}
+}
