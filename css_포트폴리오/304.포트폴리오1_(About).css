@@ -1,0 +1,351 @@
+    body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* height: 500px; */
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    /* background-color: #f0f0f0; */
+    }
+
+    #wrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: opacity 3s;
+    background: url(../img_포트폴리오/만트라우저스/main_banner_img5.jpg) no-repeat center / cover;
+    }
+
+    .contents_area {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    height: 100%;
+    position: relative;
+    }
+
+    ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+
+    a {
+    text-decoration: none;
+    color: inherit;
+    }
+/* //////////////////////////////////// */
+    .nav {
+      /* position: fixed; */
+      width: 100%;
+      height: 75px;
+      display: flex;
+      align-items: center;
+      background-color: transparent;
+      z-index: 999999999;
+    }
+
+    .nav ul {
+      position: inherit;
+      left: 10px;
+      display: flex;
+      justify-content: space-around;
+      font-size: 20px;
+      color: rgb(255, 236, 195);
+      text-shadow: 1px 1px 1px black;
+    }
+
+    .nav li {
+      padding: 0 15px;
+    }
+
+    .nav img {
+      position: fixed;
+      width: 130px;
+      height: 130px;
+      right: 20px;
+      top: 20px;
+      opacity: 0.5;
+      transition: all 0.3s;
+      z-index: 999;
+    }
+
+    .nav img:hover {
+      opacity: 1;
+    }
+
+    .logobox {
+      position: fixed;
+      width: 500px;
+      height: 500px;
+      /* border: 1px solid; */
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, 1%);
+      transition: all 0.7s;
+      background: url(../img_포트폴리오/만트라우저스/로고1.png) no-repeat center / contain;
+      z-index: 9999;
+    }
+
+    .yeri_skill {
+      display: inline-block;
+      padding-left: 10px;
+    }
+/* ///////////////////////////////////////// */
+    footer {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 200px;
+      background-color: black;
+      color: #eee;
+      transform: translateY(0px);
+    }
+
+  .row {
+    /* position: absolute;
+    bottom: 0; */
+    width: 100%;
+    display: flex;
+    /* padding: 0 75px; */
+    /* box-sizing: border-box; */
+  }
+
+  .infotxt1 {
+    position: absolute;
+    bottom: 15px;
+    left: 35%;
+  }
+
+  .infotxt2 {
+    position: absolute;
+    bottom: 72px;
+    left: 57%;
+  }
+
+  .infotxt3 {
+    position: absolute;
+    bottom: 90px;
+    left: 75%;
+  }
+
+  #logo_img2 {
+    position: absolute;
+    width: 145px;
+    height: 145px;
+    bottom: 26px;
+    left: 13%;
+  }
+
+  .row #insta_img {
+    width: 35px;
+    height: 35px;
+    padding-right: 5px;
+  }
+
+  .row #blog_img {
+    width: 35px;
+    height: 35px;
+    padding-left: 5px;
+  }
+
+  .intro {
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 72px;
+    font-weight: 900;
+    text-align: center;
+    color: white;
+    padding-top: 550px;
+    width: 100%;
+    height: 400px;
+    line-height: 400px;
+  }
+
+    #wrapper1 {
+      display: flex;
+      padding: 70px 0;
+      width: 100%;
+      height: 1000px;
+      margin-top: 50px;
+    }
+
+    #img_container1 {
+      width: 45%;
+      height: 0%;
+      background: url(../img_포트폴리오/만트라우저스/others/about1.jpg) no-repeat center / cover;
+      /* animation: fadein 1s, move_down 1s; */
+      opacity: 0;
+      transform: translateY(-200px);
+      transition: all 1s;
+    }
+
+    #txt_container_L1{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+      padding: 40px;
+      font-size: 23px;
+      font-weight: 900;
+      font-family: "Nanum Myeongjo", serif;
+      opacity: 0;
+      transition: all 1s;
+      transform: translateX(-200px);
+      /* animation: fadein 1s, move_left 1s; */
+    }
+
+    .main_desc {
+      word-spacing : 1px;
+      line-height: 35px;
+    }
+
+    .box {
+            width: 100%;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        .box1 {
+            background-image: url(../img_포트폴리오/만트라우저스/others/about2.jpg);
+        }
+        .box2 {
+            background-image: url(../img_포트폴리오/만트라우저스/others/about3.jpg);
+        }
+        .box3 {
+            background-image: url(../img_포트폴리오/만트라우저스/others/about4.jpg);
+        }
+        .box4 {
+            background-image: url(../img_포트폴리오/만트라우저스/others/about5.jpg);
+        }
+
+        .box_container {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 30px;
+        }
+  @media screen and (max-width: 768px) {
+    .nav {
+      position: relative;
+      justify-content: center;
+      transform: translateY(10px);
+    }
+    .nav ul {
+      left: auto;
+    }
+    .nav img {
+        display: none;
+    }
+    .intro {
+      padding-top: 390px;
+    }
+    #txt_container_L1 {
+      padding: 20px;
+      font-size: 22px;
+    }
+    .yeri_skill {
+      display: block;
+      padding: 0;
+    }
+    .headline {
+      line-height: 45px;
+    }
+    #logo_img2 {
+        left: 20%;
+        bottom: 132px;
+    }
+    .infotxt1 {
+        left: 50%;
+        bottom: 119px;
+    }
+    .infotxt1 h4 {
+        margin: 0;
+    }
+    .infotxt2 {
+        left: 23%;
+        bottom: 13px;
+    }
+    .infotxt3 {
+        left: 49.8%;
+        bottom: 33px;
+    }
+    footer {
+        height: 300px;
+        background-color: black;
+        color: white;
+        transform: translateY(0px);
+    }
+    footer p {
+        line-height: 21px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .nav img {
+      display: none;
+    }
+    .nav ul {
+      left: auto;
+    }
+    .nav li {
+      text-align: center;
+      display: flex;
+      align-items: center;
+    }
+    .intro {
+      font-size: 40px;
+    }
+    .headline {
+      text-align: center;
+    }
+    #wrapper1 {
+      display: block;
+      margin: 0;
+      padding: 15px 0;
+    }
+    #img_container1 {
+      width: 100%;
+    }
+    #txt_container_L1 {
+      margin: 0 auto;
+      padding: 0;
+      font-size: 16px;
+      width: 100%;
+    }
+    .main_desc {
+      margin-bottom: 20px;
+    }
+    #logo_img2 {
+      width: 100px;
+      height: 100px;
+      left: 16%;
+      bottom: 169px;
+    }
+    .infotxt1 {
+      font-size: 13px;
+      left: 46%;
+      bottom: 149px;
+    }
+    .infotxt2 {
+      font-size: 13px;
+      left: 18%;
+      bottom: 29px;
+    }
+    .infotxt3 {
+      font-size: 13px;
+      left: 219px;
+      bottom: 53px;
+    }
+    #insta_img {
+      padding-right: 2.5px;
+    }
+    #blog_img {
+      padding-left: 2.5px;
+    }
+    footer p {
+      line-height: 15px;
+    }
+  }

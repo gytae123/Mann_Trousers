@@ -1,0 +1,397 @@
+        /* 스타일 초기화 */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+#wrap {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+    ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+
+    a {
+    text-decoration: none;
+    color: inherit;
+    }
+
+    .nav {
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.125);
+    position: relative;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    z-index: 999999999;
+    }
+
+    .nav ul {
+    position: inherit;
+    left: 10px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    color: #000;
+    }
+
+    .nav li {
+    padding: 0 15px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    }
+
+    .nav img {
+    position: fixed;
+    width: 130px;
+    height: 130px;
+    right: 20px;
+    top: 20px;
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out;
+    }
+
+    .nav img:hover {
+    opacity: 1;
+    }
+
+    .nav a:hover {
+    color: burlywood;
+    transition: all 0.3s;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0, 0.125);;
+    box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.125);
+    }
+
+    /* ////////////////////////////////////////////// */
+
+    .title {
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 72px;
+    font-weight: 900;
+    text-align: center;
+    height: 100px;
+    line-height: 100px;
+    margin: 130px 0 70px
+    }
+
+    .intro {
+        width: 49%;
+        letter-spacing : 1px;
+        line-height: 55px;
+        font-family: "Nanum Myeongjo", serif;
+    }
+
+    /* ///////////////////////////////////////// */
+
+
+    .wrapper {
+        width: 600px;
+        margin: 50px auto;
+        /* background-color: pink; */
+    }
+
+
+    label {
+        display: block;
+        /* width: 100%; */
+        height: 50px;
+        line-height: 50px;
+        padding: 5px 20px;
+        font-size: 20px;
+        color: black;
+        /* background: linear-gradient(to bottom,  #fff, #eaeaea); */
+        box-shadow: 0 0 0 1px rgba(155,155,155,0.3);
+        transition: 0.4s;
+    }
+
+    label:hover {
+        background: #ccc;
+        cursor: pointer;
+    }
+        /* #rd1:checked ~ label[for="rd1"],
+        #rd2:checked ~ label[for="rd2"],
+        #rd3:checked ~ label[for="rd3"],
+        #rd4:checked ~ label[for="rd4"] { */
+    input[name="rd"]:checked + label {
+        background: #ccc;
+    }
+
+
+        .txt_box {
+            /* font-style: italic; */
+            font-size: 20px;
+            font-weight: 900;
+            color: #181818;
+            background-color: #fff; 
+            overflow: hidden;
+            box-shadow: 0 0 0 1px rgba(155,155,155,0.3);
+
+            height: 0;
+            
+            transition: all 0.5s;
+        }
+        .txt_box > p {
+            padding: 20px;
+        }
+
+        input[name="rd"] { display: none;}
+
+
+        /* #rd1:checked ~  .txt_box1,
+        #rd2:checked ~  .txt_box2,
+        #rd3:checked ~  .txt_box3,
+        #rd4:checked ~  .txt_box4 */
+        input[id="rd1"]:checked ~ .txt_box
+        {
+            height: 380px;
+        }
+        input[id="rd2"]:checked ~ .txt_box
+        {
+            height: 140px;
+        }
+        input[id="rd3"]:checked ~ .txt_box
+        {
+            height: 260px;
+        }
+        input[id="rd4"]:checked ~ .txt_box
+        {
+            height: 230px;
+        }
+        
+
+    /* /////////////////////////////////// */
+
+footer {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    color: black;
+    transform: translateY(32%);
+    box-shadow: 0 -10px 5px rgba(0, 0, 0, 0.125);
+    }
+
+    .row {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      box-sizing: border-box;
+    }
+
+  .infotxt1 {
+    position: absolute;
+    bottom: 15px;
+    left: 35%;
+  }
+
+  .infotxt2 {
+    position: absolute;
+    bottom: 72px;
+    left: 57%;
+  }
+
+  .infotxt3 {
+    position: absolute;
+    bottom: 90px;
+    left: 75%;
+  }
+
+  #logo_img2 {
+    position: absolute;
+    width: 145px;
+    height: 145px;
+    bottom: 26px;
+    left: 13%;
+  }
+
+  .row #insta_img {
+    width: 35px;
+    height: 35px;
+    padding-right: 5px;
+  }
+
+  .row #blog_img {
+    width: 35px;
+    height: 35px;
+    padding-left: 5px;
+}
+
+footer .copyright {
+    margin: 0;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(200px);
+    background: black;
+    color: white;
+}
+
+        #imageBox {
+            width: 70%;
+            height: 800px; /* 높이는 필요에 따라 조정 가능 */
+            border: 2px solid;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            border-radius: 90px;
+            margin-top: 50px;
+        }
+
+        .image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 이미지가 박스에 꽉 차도록 설정 */
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transform: scale(1); /* 기본 크기 */
+            transition: opacity 7s, transform 7s; /* 투명도와 변형에 대한 전환 적용 */
+        }
+
+        .image.active {
+            opacity: 1;
+            transform: scale(1.1); /* 활성화될 때 조금 확대 */
+        }
+
+@media screen and (max-width: 768px) {
+    .nav {
+        justify-content: center;
+    }
+    .title {
+        font-size: 50px;
+    }
+    .intro {
+        font-size: 16px;
+        width: 77%
+    }
+    .nav img {
+        display: none;
+    }
+    .wrapper {
+        width: 85%;
+    }
+    #imageBox {
+        height: 750px;
+    }
+    #logo_img2 {
+        left: 20%;
+        bottom: 182px;
+    }
+    .infotxt1 {
+        left: 50%;
+        bottom: 169px;
+    }
+    .infotxt1 h4 {
+        margin: 0;
+    }
+    .infotxt2 {
+        left: 23%;
+        bottom: 63px;
+    }
+    .infotxt3 {
+        left: 49.8%;
+        bottom: 81px;
+    }
+    footer {
+        height: 350px;
+        transform: translateY(30%);
+    }
+    footer p {
+        line-height: 21px;
+    }
+    footer .copyright {
+        transform: translateY(300px);
+    }
+}
+    @media screen and (max-width: 480px) {
+        html, body{
+            width: 100%;
+            overflow-x: hidden;
+        }
+        .nav ul {
+            font-size: 15px;
+        }
+        .intro {
+            font-size: 13px;
+            width: 77%;
+            line-height: 40px;
+        }
+        .wrapper {
+            width: 85%;
+        }
+        .txt_box {
+            font-size: 15px;
+        }
+        input[id="rd1"]:checked ~ .txt_box {
+            height: 345px;
+        }
+        input[id="rd2"]:checked ~ .txt_box {
+            height: 120px;
+        }
+        input[id="rd3"]:checked ~ .txt_box {
+            height: 215px;
+        }
+        input[id="rd4"]:checked ~ .txt_box {
+            height: 220px;
+        }
+
+        #imageBox {
+            width: 80%;
+            height: 730px;
+        }
+        #logo_img2 {
+            width: 100px;
+            height: 100px;
+            left: 16%;
+            bottom: 219px;
+        }
+        .infotxt1 {
+            font-size: 13px;
+            left: 46%;
+            bottom: 199px;
+        }
+        .infotxt2 {
+            font-size: 13px;
+            left: 18%;
+            bottom: 79px;
+        }
+        .infotxt3 {
+            font-size: 13px;
+            left: 219px;
+            bottom: 103px;
+        }
+        #insta_img {
+            padding-right: 2.5px;
+        }
+        #blog_img {
+            padding-left: 2.5px;
+        }
+        footer p {
+            line-height: 15px;
+        }
+    }
